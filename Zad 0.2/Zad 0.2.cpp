@@ -16,6 +16,8 @@ int main()
 {
     std::vector<int> wektor(100);
     for (int i = 0; i < wektor.size(); ++i)
-        std::cout << wektor[i] = i + 1;
+        wektor[i] = i + 1;
+
+
 }
 

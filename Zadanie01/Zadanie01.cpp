@@ -20,6 +20,6 @@ int main()
 	auto lambdaGreet = []() { std::cout << "Hello world"; };
 	auto lambdaAdd = [](int x, int y) { return x + y; };
 	lambdaGreet();
-	lambdaAdd(1,2);
+	std::cout << lambdaAdd(1,2);
 }
 
