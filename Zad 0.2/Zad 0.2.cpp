@@ -11,6 +11,7 @@
 
 #include <iostream>
 #include <vector>
+#include <algorithm>
 
 int main()
 {
@@ -18,6 +19,7 @@ int main()
     for (int i = 0; i < wektor.size(); ++i)
         wektor[i] = i + 1;
 
+    std::for_each(wektor.begin(), wektor.end(),[](int a) { std::cout << a << " " << std::endl; });
 
 }
 
