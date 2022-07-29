@@ -16,21 +16,33 @@
 bool isEven(int i)
 {
     if (i % 2 == 0)
+    {
         return true;
+    }
     else
+    {
         return false;
+    }
+        
 }
 
 bool greater4(int i)
 {
-    if (i <= 4 == 0)
-        return true;
-    else
-        return false;
+
+    return i > 4;
 }
 
-class LessThan
-{};
+struct checkNumbers
+{
+    void operator() (int a)
+    {
+        if (a < 50)
+        {
+            std::cout << a << " ";
+        }
+    }
+};
+
 
 int main()
 {
@@ -51,12 +63,12 @@ int main()
 
     ////std::count_if(wektor.begin(), wektor.end(), UnaryPredicate p);
 
-    //std::for_each(wektor.begin(), wektor.end(), 
 
+    //std::for_each(wektor.begin(), wektor.end(), checkNumbers();
 //f
-        int nrEven = std::count_if(wektor.begin(), wektor.end(), isEven);
+        int noEven = std::count_if(wektor.begin(), wektor.end(), isEven);
 
-        std::cout << "Total no of even numbers is: " << nrEven << std::endl;
+        std::cout << "Total no of even numbers is: " << noEven << std::endl;
 //c
         int greaterThan = std::count_if(wektor.begin(), wektor.end(), greater4);
 
