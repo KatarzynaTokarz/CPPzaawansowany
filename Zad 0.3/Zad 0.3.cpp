@@ -90,5 +90,16 @@ int main()
 
     std::for_each(numbers2.begin(), numbers2.end(), [](const int i) {std::cout << i << " "; });
     std::cout << std::endl;
+
+
+    //f) Zlicz sum? wszystkich liczb parzystych i zapisz j? do zmiennej lokalnej int sum;
+    int sum = 0;
+
+    std::for_each(numbers.cbegin(), numbers.cend(), [&sum](int i) {
+        if (i % 2 == 0)
+            sum += i; });
+
+    auto sumOdd = [](int a, int b) {return a + b; };
+    int result = std::accumulate(numbers.begin(), numbers.end(), 0, sumOdd);
 }
 
