@@ -35,23 +35,16 @@ int main()
             std::cout << "Odpowiedz: Nie wszytskie liczby sa dodatnie." << std::endl;
             break;
         }
-        else 
-        {
-            ++it;
-        }
+    
     }
     std::cout << std::endl;
 //c
     std::cout << "C: Usun z kontenera 0. " << std::endl;
-    for (std::vector<int>::iterator it = numbers.begin(); it != numbers.end();) 
+    for (std::vector<int>::iterator it = numbers.begin(); it != numbers.end(); ++it) 
     {
         if (*it == 0)
         {
             it = numbers.erase(it);
-        }
-        else
-        {
-            ++it;
         }
     }
     //std::for_each(numbers.begin(), numbers.end(), [](const int i) {std::cout << i << " "; });
