@@ -19,9 +19,6 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <random>
-#include <algorithm>
-#include <numeric>
 
 class MyFile
 {
@@ -30,10 +27,9 @@ private:
     std::fstream file;
 
 public:
-    MyFile(std::string filePath)
+    MyFile(std::string fileName)
     {
-        std::fstream file(filePath, std::ios::out | std::ios::trunc);
-        file.open(filePath, std::ios::in | std::ios::out);
+        file.open("C:\\Users\\kasia\\source\\CPPzaawansowaneZadania\\PracaDomowaPlik", std::ios::in | std::ios::out);
         if (file.good() == true)
         {
             std::cout << "Plik jest otwarty" << std::endl;
@@ -44,7 +40,8 @@ public:
     {
         file.close();
     }
-    void save(Pracownik pracownik);
+
+    //void save(Pracownik pracownik);
     std::string read();
 };
 
@@ -56,7 +53,6 @@ private:
     int _numerPracownika;
     float _pensja;
     int generateNr();
-
 public:
     Pracownik(std::string imie, std::string nazwisko, float pensja)
     {
@@ -67,22 +63,24 @@ public:
     }
 };
 
-int Pracownik::generateNr()
-{
-    std::random_device nr;
-    std::mt19937 gen(nr());
-    std::uniform_int_distribution<int>dist(1, 100);
-
-    return dist(gen);
-}
-
 
 int main()
 {
-    MyFile plik1("C:\\Users\\kasia\\source\\CPPzaawansowaneZadania\\PracaDomowaPlik1");
+    MyFile plik1("C:\\Users\\kasia\\source\\CPPzaawansowaneZadania\\PracaDomowaPlik");
     Pracownik pracownik1("Kasia", "Stoklosa", 1000);
     //plik1.save(pracownik1);
 }
 
+int Pracownik::generateNr()
+{
+    return 0;
+}
 
+//void MyFile::save(std::string line)
+//{
+//}
 
+std::string MyFile::read()
+{
+    return std::string();
+}

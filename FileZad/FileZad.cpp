@@ -8,6 +8,7 @@
 #include <algorithm>
 #include <numeric>
 #include <fstream>
+#include <string>
 
 std::vector<long> numbers;
 std::random_device r;
