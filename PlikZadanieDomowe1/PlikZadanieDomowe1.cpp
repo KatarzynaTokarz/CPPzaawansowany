@@ -60,12 +60,16 @@ int main()
 
                 if (wybor == 1)
                 {
+                    std::cout << std::endl; 
+                    std::cout << "podaj nowa ilosc tego produktu"<<std::endl;
                     std::cin >> ilosc;
                     std::cout << std::endl;
                     listaZakupow[nazwaProduktu] = ilosc;
                 }
                 if (wybor == 2)
                 {
+                    std::cout << std::endl;
+                    std::cout << "Podaj ile chcesz dodac do poprzedniej ilosci." << std::endl;
                     std::cin >> ilosc;
                     std::cout << std::endl;
                     listaZakupow[nazwaProduktu] = ilosc + it->second;
