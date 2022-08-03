@@ -1,0 +1,4 @@
+chleb : 3
+kawa : 5
+ogorek : 7
+woda : 9

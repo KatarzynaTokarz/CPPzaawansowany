@@ -1,0 +1,38 @@
+Zad 1.
+Program lista zakupów
+Stwórz program, który będzie od użytkownika wczytywał nazwy produktów spożywczych oraz ilość do kupienia (dla uproszczenia bez jednostki miary).
+- dla pewności zamień duże litery na małe
+- gdy uzytkownik poraz drugi wprowadzi ten sam produkt, zapytaj się go co chce zrobić:
+a) nadpisac (zamieniamy starą wartość na nową)
+b) zsumowac (sumujemy obie wartości)
+c) pominac (zostawiamy pierwszą wartość)
+
+Następnie zapisz dane do pliku lista_zakupow.txt
+np:
+jablko 4
+ziemniaki 3
+kiszony ogorek 1
+smietana 1
+
+Zad 2.
+Wczytaj plik zdania.csv (Podczas pracy z tym zadaniem NIE NADPISUJ tego pliku).
+Wypisz na konsolę:
+- najdłuższe zdanie (najwięcej słów)
+- najdłuższe zdanie (najwięcej liter)
+- najkrotsze zdanie (najmniej słów)
+- najkrotsze zdanie (najmniej liter)
+- zlicz wszystkie wystąpienia wszystkich słów w pliku.
+
+Zad 3.
+Wczytaj plik secret_file.csv (Podczas pracy z tym zadaniem NIE NADPISUJ tego pliku).
+Do osobnego pliku wypisz wszystkie nazwy użytkowników i ich hasła, które nie spełniają naszych wymagań:
+- minimum 8 znaków
+- przynajmniej 1 duża litera, 1 mała litera i 1 cyfra
+
+Zad 4.
+Wczytaj plik customers.csv (Podczas pracy z tym zadaniem NIE NADPISUJ tego pliku)
+a. W wyniku błedu w aplikacji, kilka osób jest wpisanych kilkukrotnie, przed rozpoczęciem pracy upewnij się, że usunąłęś zduplikowane wpisy. (Dobrych wpisów powinno być 1000)
+b. Proszę usuń wpisy osób, które nie podały adresu e-mail. 
+c. Potrzebujemy listę osób, które założyło konta w naszym serwisie przy użyciu maila z domeny .edu. Zapisz ich dane do osobnego pliku edu.csv. Zachowaj format pliku źródłowego
+d. Przygotuj statystykę firm wraz z liczbą osób tam zatrudnionych, którzy są naszymi klientami. Zapisz ją do pliku companies.csv
+f. Zapisz poprawiony plik jako customers_fixed.csv

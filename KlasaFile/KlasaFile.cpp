@@ -32,19 +32,32 @@ private:
 public:
     MyFile(std::string filePath)
     {
-        std::fstream file(filePath, std::ios::out | std::ios::trunc);
-        file.open(filePath, std::ios::in | std::ios::out);
-        if (file.good() == true)
+        //std::fstream file(filePath, std::ios::out | std::ios::trunc);
+        //file.open(filePath, std::ios::in | std::ios::out);
+        //if (file.good() == true)
+        //{
+        //    std::cout << "Plik jest otwarty" << std::endl;
+        //}
+        //else std::cout << "Dostep do pliku zabroniony!" << std::endl;
+        std::string fileNameWithPath("C:\\Users\\kasia\\source\\CPPzaawansowaneZadania\\PracaDomowaPlik1");
+        std::string fileName("Pliki.cpp");
+        std::ifstream file(fileNameWithPath);
+
+        if (file.is_open())
         {
-            std::cout << "Plik jest otwarty" << std::endl;
+            std::cout << "plik open " << std::endl;
         }
-        else std::cout << "Dostep do pliku zabroniony!" << std::endl;
+        else
+        {
+            std::cout << "problem";
+        }
+
     }
     ~MyFile()
     {
         file.close();
     }
-    void save(Pracownik pracownik);
+    //void save(Pracownik pracownik);
     std::string read();
 };
 
